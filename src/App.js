@@ -42,4 +42,6 @@ class App extends Component {
   }
 }
 
+console.log("hello there!")
+
 export default App;
