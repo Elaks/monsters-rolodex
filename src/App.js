@@ -9,7 +9,8 @@ class App extends Component {
     
     this.state = {
       monsters: [],
-      searchField: ''
+      searchField: '',
+      title: ''
   };
 }
 
@@ -18,6 +19,10 @@ class App extends Component {
       .then(response => response.json())
       .then(users => this.setState({ monsters : users}));
   }
+  
+  onSearchChange = event => {
+    this.setState({searchField: event.target.value, title: event.target.value})
+  };
 
   handleChange = (e) => {
     this.setState({searchField: e.target.value});
